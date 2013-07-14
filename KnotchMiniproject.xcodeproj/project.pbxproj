@@ -51,6 +51,10 @@
 		DE1D99AA179329B200EA04A8 /* profile test.psd in Resources */ = {isa = PBXBuildFile; fileRef = DE1D998F179329B200EA04A8 /* profile test.psd */; };
 		DE1D99AB179329B200EA04A8 /* profile-test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D9990179329B200EA04A8 /* profile-test@2x.png */; };
 		DE1D99AC179329B200EA04A8 /* topic-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D9991179329B200EA04A8 /* topic-arrow@2x.png */; };
+		DE1D99B117932AA800EA04A8 /* KnotchMiniClientUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D99B017932AA800EA04A8 /* KnotchMiniClientUser.m */; };
+		DE1D99B317933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1D99B217933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib */; };
+		DE1D99BF179347C700EA04A8 /* KnotchUserProfileHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D99BE179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.m */; };
+		DE1D99C317934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1D99C217934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +118,12 @@
 		DE1D998F179329B200EA04A8 /* profile test.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "profile test.psd"; sourceTree = "<group>"; };
 		DE1D9990179329B200EA04A8 /* profile-test@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile-test@2x.png"; sourceTree = "<group>"; };
 		DE1D9991179329B200EA04A8 /* topic-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "topic-arrow@2x.png"; sourceTree = "<group>"; };
+		DE1D99AF17932AA800EA04A8 /* KnotchMiniClientUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchMiniClientUser.h; sourceTree = "<group>"; };
+		DE1D99B017932AA800EA04A8 /* KnotchMiniClientUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchMiniClientUser.m; sourceTree = "<group>"; };
+		DE1D99B217933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnotchUserProfileHeaderSection.xib; sourceTree = "<group>"; };
+		DE1D99BD179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchUserProfileHeaderSectionView.h; sourceTree = "<group>"; };
+		DE1D99BE179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchUserProfileHeaderSectionView.m; sourceTree = "<group>"; };
+		DE1D99C217934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnotchUserProfileTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +183,8 @@
 		DE1D993D1793297D00EA04A8 /* KnotchMiniproject */ = {
 			isa = PBXGroup;
 			children = (
+				DE1D99AE17932A1D00EA04A8 /* Models */,
+				DE1D99AD17932A1500EA04A8 /* Services */,
 				DE1D99461793297D00EA04A8 /* KnotchMiniClientAppDelegate.h */,
 				DE1D99471793297D00EA04A8 /* KnotchMiniClientAppDelegate.m */,
 				DE1D994F1793297D00EA04A8 /* MainStoryboard_iPhone.storyboard */,
@@ -180,6 +192,10 @@
 				DE1D99551793297D00EA04A8 /* KnotchMiniClientViewController.h */,
 				DE1D99561793297D00EA04A8 /* KnotchMiniClientViewController.m */,
 				DE1D993E1793297D00EA04A8 /* Supporting Files */,
+				DE1D99B217933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib */,
+				DE1D99BD179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.h */,
+				DE1D99BE179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.m */,
+				DE1D99C217934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib */,
 			);
 			path = KnotchMiniproject;
 			sourceTree = "<group>";
@@ -258,6 +274,22 @@
 				DE1D998E179329B200EA04A8 /* SIL Open Font License 1.1.txt */,
 			);
 			path = lato;
+			sourceTree = "<group>";
+		};
+		DE1D99AD17932A1500EA04A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		DE1D99AE17932A1D00EA04A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE1D99AF17932AA800EA04A8 /* KnotchMiniClientUser.h */,
+				DE1D99B017932AA800EA04A8 /* KnotchMiniClientUser.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +397,8 @@
 				DE1D99AA179329B200EA04A8 /* profile test.psd in Resources */,
 				DE1D99AB179329B200EA04A8 /* profile-test@2x.png in Resources */,
 				DE1D99AC179329B200EA04A8 /* topic-arrow@2x.png in Resources */,
+				DE1D99B317933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib in Resources */,
+				DE1D99C317934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +436,8 @@
 				DE1D99441793297D00EA04A8 /* main.m in Sources */,
 				DE1D99481793297D00EA04A8 /* KnotchMiniClientAppDelegate.m in Sources */,
 				DE1D99571793297D00EA04A8 /* KnotchMiniClientViewController.m in Sources */,
+				DE1D99B117932AA800EA04A8 /* KnotchMiniClientUser.m in Sources */,
+				DE1D99BF179347C700EA04A8 /* KnotchUserProfileHeaderSectionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
