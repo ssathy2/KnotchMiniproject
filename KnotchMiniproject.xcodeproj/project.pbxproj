@@ -16,8 +16,6 @@
 		DE1D994A1793297D00EA04A8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D99491793297D00EA04A8 /* Default.png */; };
 		DE1D994C1793297D00EA04A8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D994B1793297D00EA04A8 /* Default@2x.png */; };
 		DE1D994E1793297D00EA04A8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D994D1793297D00EA04A8 /* Default-568h@2x.png */; };
-		DE1D99511793297D00EA04A8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1D994F1793297D00EA04A8 /* MainStoryboard_iPhone.storyboard */; };
-		DE1D99541793297D00EA04A8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1D99521793297D00EA04A8 /* MainStoryboard_iPad.storyboard */; };
 		DE1D99571793297D00EA04A8 /* KnotchMiniClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D99561793297D00EA04A8 /* KnotchMiniClientViewController.m */; };
 		DE1D995F1793297D00EA04A8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1D995E1793297D00EA04A8 /* SenTestingKit.framework */; };
 		DE1D99601793297D00EA04A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1D99371793297D00EA04A8 /* UIKit.framework */; };
@@ -55,6 +53,20 @@
 		DE1D99B317933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1D99B217933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib */; };
 		DE1D99BF179347C700EA04A8 /* KnotchUserProfileHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D99BE179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.m */; };
 		DE1D99C317934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE1D99C217934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib */; };
+		DE1D9A571793752300EA04A8 /* KnotchMiniClientDataServices.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A561793752300EA04A8 /* KnotchMiniClientDataServices.m */; };
+		DE1D9A5A1793753D00EA04A8 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1D9A581793753D00EA04A8 /* MainStoryboard_iPad.storyboard */; };
+		DE1D9A5B1793753D00EA04A8 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1D9A591793753D00EA04A8 /* MainStoryboard_iPhone.storyboard */; };
+		DE1D9A70179375DD00EA04A8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A5E179375DD00EA04A8 /* AFHTTPClient.m */; };
+		DE1D9A71179375DD00EA04A8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A60179375DD00EA04A8 /* AFHTTPRequestOperation.m */; };
+		DE1D9A72179375DD00EA04A8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A62179375DD00EA04A8 /* AFImageRequestOperation.m */; };
+		DE1D9A73179375DD00EA04A8 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A64179375DD00EA04A8 /* AFJSONRequestOperation.m */; };
+		DE1D9A74179375DD00EA04A8 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A66179375DD00EA04A8 /* AFNetworkActivityIndicatorManager.m */; };
+		DE1D9A75179375DD00EA04A8 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A69179375DD00EA04A8 /* AFPropertyListRequestOperation.m */; };
+		DE1D9A76179375DD00EA04A8 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A6B179375DD00EA04A8 /* AFURLConnectionOperation.m */; };
+		DE1D9A77179375DD00EA04A8 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A6D179375DD00EA04A8 /* AFXMLRequestOperation.m */; };
+		DE1D9A78179375DD00EA04A8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A6F179375DD00EA04A8 /* UIImageView+AFNetworking.m */; };
+		DE1D9A7B17937A1900EA04A8 /* KnotchUserProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A7A17937A1800EA04A8 /* KnotchUserProfileTableViewCell.m */; };
+		DE1D9A7E17937A4800EA04A8 /* KnotchData.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A7D17937A4800EA04A8 /* KnotchData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +93,6 @@
 		DE1D99491793297D00EA04A8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE1D994B1793297D00EA04A8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DE1D994D1793297D00EA04A8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DE1D99501793297D00EA04A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		DE1D99531793297D00EA04A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		DE1D99551793297D00EA04A8 /* KnotchMiniClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnotchMiniClientViewController.h; sourceTree = "<group>"; };
 		DE1D99561793297D00EA04A8 /* KnotchMiniClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnotchMiniClientViewController.m; sourceTree = "<group>"; };
 		DE1D995D1793297D00EA04A8 /* KnotchMiniprojectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnotchMiniprojectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +134,33 @@
 		DE1D99BD179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchUserProfileHeaderSectionView.h; sourceTree = "<group>"; };
 		DE1D99BE179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchUserProfileHeaderSectionView.m; sourceTree = "<group>"; };
 		DE1D99C217934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnotchUserProfileTableViewCell.xib; sourceTree = "<group>"; };
+		DE1D9A551793752300EA04A8 /* KnotchMiniClientDataServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchMiniClientDataServices.h; sourceTree = "<group>"; };
+		DE1D9A561793752300EA04A8 /* KnotchMiniClientDataServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchMiniClientDataServices.m; sourceTree = "<group>"; };
+		DE1D9A581793753D00EA04A8 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		DE1D9A591793753D00EA04A8 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		DE1D9A5D179375DD00EA04A8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		DE1D9A5E179375DD00EA04A8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		DE1D9A5F179375DD00EA04A8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		DE1D9A60179375DD00EA04A8 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		DE1D9A61179375DD00EA04A8 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		DE1D9A62179375DD00EA04A8 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		DE1D9A63179375DD00EA04A8 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		DE1D9A64179375DD00EA04A8 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		DE1D9A65179375DD00EA04A8 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		DE1D9A66179375DD00EA04A8 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		DE1D9A67179375DD00EA04A8 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		DE1D9A68179375DD00EA04A8 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		DE1D9A69179375DD00EA04A8 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		DE1D9A6A179375DD00EA04A8 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		DE1D9A6B179375DD00EA04A8 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		DE1D9A6C179375DD00EA04A8 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		DE1D9A6D179375DD00EA04A8 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		DE1D9A6E179375DD00EA04A8 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		DE1D9A6F179375DD00EA04A8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		DE1D9A7917937A1800EA04A8 /* KnotchUserProfileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchUserProfileTableViewCell.h; sourceTree = "<group>"; };
+		DE1D9A7A17937A1800EA04A8 /* KnotchUserProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchUserProfileTableViewCell.m; sourceTree = "<group>"; };
+		DE1D9A7C17937A4800EA04A8 /* KnotchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchData.h; sourceTree = "<group>"; };
+		DE1D9A7D17937A4800EA04A8 /* KnotchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +194,7 @@
 				DE1D99641793297D00EA04A8 /* KnotchMiniprojectTests */,
 				DE1D99361793297D00EA04A8 /* Frameworks */,
 				DE1D99351793297D00EA04A8 /* Products */,
+				DE1D9A5C179375DD00EA04A8 /* AFNetworking */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,12 +221,12 @@
 		DE1D993D1793297D00EA04A8 /* KnotchMiniproject */ = {
 			isa = PBXGroup;
 			children = (
+				DE1D9A581793753D00EA04A8 /* MainStoryboard_iPad.storyboard */,
+				DE1D9A591793753D00EA04A8 /* MainStoryboard_iPhone.storyboard */,
 				DE1D99AE17932A1D00EA04A8 /* Models */,
 				DE1D99AD17932A1500EA04A8 /* Services */,
 				DE1D99461793297D00EA04A8 /* KnotchMiniClientAppDelegate.h */,
 				DE1D99471793297D00EA04A8 /* KnotchMiniClientAppDelegate.m */,
-				DE1D994F1793297D00EA04A8 /* MainStoryboard_iPhone.storyboard */,
-				DE1D99521793297D00EA04A8 /* MainStoryboard_iPad.storyboard */,
 				DE1D99551793297D00EA04A8 /* KnotchMiniClientViewController.h */,
 				DE1D99561793297D00EA04A8 /* KnotchMiniClientViewController.m */,
 				DE1D993E1793297D00EA04A8 /* Supporting Files */,
@@ -196,6 +234,8 @@
 				DE1D99BD179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.h */,
 				DE1D99BE179347C600EA04A8 /* KnotchUserProfileHeaderSectionView.m */,
 				DE1D99C217934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib */,
+				DE1D9A7917937A1800EA04A8 /* KnotchUserProfileTableViewCell.h */,
+				DE1D9A7A17937A1800EA04A8 /* KnotchUserProfileTableViewCell.m */,
 			);
 			path = KnotchMiniproject;
 			sourceTree = "<group>";
@@ -279,6 +319,8 @@
 		DE1D99AD17932A1500EA04A8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DE1D9A551793752300EA04A8 /* KnotchMiniClientDataServices.h */,
+				DE1D9A561793752300EA04A8 /* KnotchMiniClientDataServices.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -286,10 +328,38 @@
 		DE1D99AE17932A1D00EA04A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE1D9A7C17937A4800EA04A8 /* KnotchData.h */,
+				DE1D9A7D17937A4800EA04A8 /* KnotchData.m */,
 				DE1D99AF17932AA800EA04A8 /* KnotchMiniClientUser.h */,
 				DE1D99B017932AA800EA04A8 /* KnotchMiniClientUser.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		DE1D9A5C179375DD00EA04A8 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				DE1D9A5D179375DD00EA04A8 /* AFHTTPClient.h */,
+				DE1D9A5E179375DD00EA04A8 /* AFHTTPClient.m */,
+				DE1D9A5F179375DD00EA04A8 /* AFHTTPRequestOperation.h */,
+				DE1D9A60179375DD00EA04A8 /* AFHTTPRequestOperation.m */,
+				DE1D9A61179375DD00EA04A8 /* AFImageRequestOperation.h */,
+				DE1D9A62179375DD00EA04A8 /* AFImageRequestOperation.m */,
+				DE1D9A63179375DD00EA04A8 /* AFJSONRequestOperation.h */,
+				DE1D9A64179375DD00EA04A8 /* AFJSONRequestOperation.m */,
+				DE1D9A65179375DD00EA04A8 /* AFNetworkActivityIndicatorManager.h */,
+				DE1D9A66179375DD00EA04A8 /* AFNetworkActivityIndicatorManager.m */,
+				DE1D9A67179375DD00EA04A8 /* AFNetworking.h */,
+				DE1D9A68179375DD00EA04A8 /* AFPropertyListRequestOperation.h */,
+				DE1D9A69179375DD00EA04A8 /* AFPropertyListRequestOperation.m */,
+				DE1D9A6A179375DD00EA04A8 /* AFURLConnectionOperation.h */,
+				DE1D9A6B179375DD00EA04A8 /* AFURLConnectionOperation.m */,
+				DE1D9A6C179375DD00EA04A8 /* AFXMLRequestOperation.h */,
+				DE1D9A6D179375DD00EA04A8 /* AFXMLRequestOperation.m */,
+				DE1D9A6E179375DD00EA04A8 /* UIImageView+AFNetworking.h */,
+				DE1D9A6F179375DD00EA04A8 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,8 +438,6 @@
 				DE1D994A1793297D00EA04A8 /* Default.png in Resources */,
 				DE1D994C1793297D00EA04A8 /* Default@2x.png in Resources */,
 				DE1D994E1793297D00EA04A8 /* Default-568h@2x.png in Resources */,
-				DE1D99511793297D00EA04A8 /* MainStoryboard_iPhone.storyboard in Resources */,
-				DE1D99541793297D00EA04A8 /* MainStoryboard_iPad.storyboard in Resources */,
 				DE1D9992179329B200EA04A8 /* Aller Font License.txt in Resources */,
 				DE1D9993179329B200EA04A8 /* Aller_Bd.ttf in Resources */,
 				DE1D9994179329B200EA04A8 /* Aller_BdIt.ttf in Resources */,
@@ -399,6 +467,8 @@
 				DE1D99AC179329B200EA04A8 /* topic-arrow@2x.png in Resources */,
 				DE1D99B317933AFC00EA04A8 /* KnotchUserProfileHeaderSection.xib in Resources */,
 				DE1D99C317934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib in Resources */,
+				DE1D9A5A1793753D00EA04A8 /* MainStoryboard_iPad.storyboard in Resources */,
+				DE1D9A5B1793753D00EA04A8 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +508,18 @@
 				DE1D99571793297D00EA04A8 /* KnotchMiniClientViewController.m in Sources */,
 				DE1D99B117932AA800EA04A8 /* KnotchMiniClientUser.m in Sources */,
 				DE1D99BF179347C700EA04A8 /* KnotchUserProfileHeaderSectionView.m in Sources */,
+				DE1D9A571793752300EA04A8 /* KnotchMiniClientDataServices.m in Sources */,
+				DE1D9A70179375DD00EA04A8 /* AFHTTPClient.m in Sources */,
+				DE1D9A71179375DD00EA04A8 /* AFHTTPRequestOperation.m in Sources */,
+				DE1D9A72179375DD00EA04A8 /* AFImageRequestOperation.m in Sources */,
+				DE1D9A73179375DD00EA04A8 /* AFJSONRequestOperation.m in Sources */,
+				DE1D9A74179375DD00EA04A8 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				DE1D9A75179375DD00EA04A8 /* AFPropertyListRequestOperation.m in Sources */,
+				DE1D9A76179375DD00EA04A8 /* AFURLConnectionOperation.m in Sources */,
+				DE1D9A77179375DD00EA04A8 /* AFXMLRequestOperation.m in Sources */,
+				DE1D9A78179375DD00EA04A8 /* UIImageView+AFNetworking.m in Sources */,
+				DE1D9A7B17937A1900EA04A8 /* KnotchUserProfileTableViewCell.m in Sources */,
+				DE1D9A7E17937A4800EA04A8 /* KnotchData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,22 +548,6 @@
 				DE1D99411793297D00EA04A8 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DE1D994F1793297D00EA04A8 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE1D99501793297D00EA04A8 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		DE1D99521793297D00EA04A8 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE1D99531793297D00EA04A8 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		DE1D99671793297D00EA04A8 /* InfoPlist.strings */ = {
@@ -628,6 +694,7 @@
 				DE1D99711793297D00EA04A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE1D99721793297D00EA04A8 /* Build configuration list for PBXNativeTarget "KnotchMiniprojectTests" */ = {
 			isa = XCConfigurationList;
@@ -636,6 +703,7 @@
 				DE1D99741793297D00EA04A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

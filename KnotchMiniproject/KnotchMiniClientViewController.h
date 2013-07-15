@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KnotchMiniClientUser.h"
+#import "KnotchUserProfileHeaderSectionView.h"
+#import "KnotchData.h"
 
-@interface KnotchMiniClientViewController : UIViewController
-
+@interface KnotchMiniClientViewController : UITableViewController
 @end

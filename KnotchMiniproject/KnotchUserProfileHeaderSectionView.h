@@ -11,11 +11,13 @@
 
 @interface KnotchUserProfileHeaderSectionView : UIView
 
-@property (weak, nonatomic) IBOutlet UIImageView* headerSectionImageView;
-@property (weak, nonatomic) IBOutlet UILabel* headerSectionNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel* headerSectionLocationLabel;
-@property (weak, nonatomic) IBOutlet UILabel* headerSectionGloryNumberLabel;
-@property (weak, nonatomic) IBOutlet UILabel* headerSectionFollowersNumberLabel;
-@property (weak, nonatomic) IBOutlet UILabel* headerSectionFollowingNumberLabel;
 @property (strong, nonatomic) KnotchMiniClientUser* headerSectionUser;
+@property (weak, nonatomic) IBOutlet UIImageView *headerSectionImageView;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionLocationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionGloryNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionFollowingNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionFollowersNumberLabel;
+
+- (void) setHeaderSectionImage: (UIImage*) img;
 @end

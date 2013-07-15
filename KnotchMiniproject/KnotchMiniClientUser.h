@@ -18,5 +18,5 @@
 	@property (strong, nonatomic) NSURL* userProfilePictureURL;
 	@property (strong, nonatomic) NSString* userName;
 
-	- (id)initWithDictionary: (NSDictionary*) dict;
+	- (id)initWithDictionary: (NSDictionary*) userInfoDict;
 @end

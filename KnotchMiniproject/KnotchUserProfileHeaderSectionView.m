@@ -7,8 +7,10 @@
 //
 
 #import "KnotchUserProfileHeaderSectionView.h"
+#import "KnotchMiniClientDataServices.h"
 
 @implementation KnotchUserProfileHeaderSectionView
+	@synthesize headerSectionFollowersNumberLabel;
 	@synthesize headerSectionUser = _headerSectionUser;
 
 - (id)initWithFrame:(CGRect)frame
@@ -20,6 +22,7 @@
     return self;
 }
 
+
 - (void) setHeaderSectionUser:(KnotchMiniClientUser *) user
 {
 	if(user != _headerSectionUser)
@@ -28,10 +31,15 @@
 		self.headerSectionFollowersNumberLabel.text = [NSString stringWithFormat: @"%i", _headerSectionUser.userNumFollowers];
 		self.headerSectionFollowingNumberLabel.text = [NSString stringWithFormat: @"%i", _headerSectionUser.userNumFollowing];
 		self.headerSectionGloryNumberLabel.text = [NSString stringWithFormat: @"%i", _headerSectionUser.userNumGlory];
-		//self.headerSectionImageView = [UIImage image], _headerSectionUser.userNumGlory];
 		self.headerSectionLocationLabel.text = _headerSectionUser.userLocation;
 		self.headerSectionNameLabel.text = _headerSectionUser.userName;
-		
+	}
+}
+
+- (void) setHeaderSectionImage: (UIImage*) img
+{
+	if(self.headerSectionImageView) {
+		[self.headerSectionImageView setImage: img];
 	}
 }
 
