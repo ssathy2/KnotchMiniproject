@@ -67,6 +67,7 @@
 		DE1D9A78179375DD00EA04A8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A6F179375DD00EA04A8 /* UIImageView+AFNetworking.m */; };
 		DE1D9A7B17937A1900EA04A8 /* KnotchUserProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A7A17937A1800EA04A8 /* KnotchUserProfileTableViewCell.m */; };
 		DE1D9A7E17937A4800EA04A8 /* KnotchData.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A7D17937A4800EA04A8 /* KnotchData.m */; };
+		DE1D9A8117939FE200EA04A8 /* KnotchMiniClientUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1D9A8017939FE100EA04A8 /* KnotchMiniClientUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,8 @@
 		DE1D9A7A17937A1800EA04A8 /* KnotchUserProfileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchUserProfileTableViewCell.m; sourceTree = "<group>"; };
 		DE1D9A7C17937A4800EA04A8 /* KnotchData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchData.h; sourceTree = "<group>"; };
 		DE1D9A7D17937A4800EA04A8 /* KnotchData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchData.m; sourceTree = "<group>"; };
+		DE1D9A7F17939FE000EA04A8 /* KnotchMiniClientUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchMiniClientUtils.h; sourceTree = "<group>"; };
+		DE1D9A8017939FE100EA04A8 /* KnotchMiniClientUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchMiniClientUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +239,8 @@
 				DE1D99C217934D3400EA04A8 /* KnotchUserProfileTableViewCell.xib */,
 				DE1D9A7917937A1800EA04A8 /* KnotchUserProfileTableViewCell.h */,
 				DE1D9A7A17937A1800EA04A8 /* KnotchUserProfileTableViewCell.m */,
+				DE1D9A7F17939FE000EA04A8 /* KnotchMiniClientUtils.h */,
+				DE1D9A8017939FE100EA04A8 /* KnotchMiniClientUtils.m */,
 			);
 			path = KnotchMiniproject;
 			sourceTree = "<group>";
@@ -520,6 +525,7 @@
 				DE1D9A78179375DD00EA04A8 /* UIImageView+AFNetworking.m in Sources */,
 				DE1D9A7B17937A1900EA04A8 /* KnotchUserProfileTableViewCell.m in Sources */,
 				DE1D9A7E17937A4800EA04A8 /* KnotchData.m in Sources */,
+				DE1D9A8117939FE200EA04A8 /* KnotchMiniClientUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

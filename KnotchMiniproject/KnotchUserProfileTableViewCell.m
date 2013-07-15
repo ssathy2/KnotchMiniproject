@@ -27,6 +27,7 @@
 		_knotchData = data;
 		self.knotchTopicLabel.text = _knotchData.knotchTopic;
 		self.knotchUserResponseLabel.text = _knotchData.knotchComment;
+		self.knotchUserResponseLabelContainer.backgroundColor = [KnotchMiniClientUtils colorForSentimentValue: [_knotchData knotchSentiment]];
 	}
 }
 /*

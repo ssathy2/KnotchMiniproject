@@ -30,6 +30,7 @@ user: "1572450228"*/
 				self.knotchID = (NSString*)[dict objectForKey: @"_id"];
 				self.knotchPostedDate = (NSDate*)[dict objectForKey: @"timestamp"];
 				self.knotchTopic = (NSString*)[dict objectForKey: @"topic"];
+				self.knotchSentiment = (int)[[dict objectForKey: @"sentiment"] intValue];
 			}
 		}
 		return self;

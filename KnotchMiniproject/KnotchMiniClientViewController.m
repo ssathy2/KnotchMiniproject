@@ -27,17 +27,28 @@ static NSString *KNOTCH_TABLEVIEW_CELL = @"KnotchUserProfileTableViewCell";
 // Put all table configuration init stuff here
 - (void)configureTable
 {
-	/*UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
+	UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
 	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: @"Pull to Refresh"];
 	[refresh addTarget:self
 				action:@selector(refreshView:)
 	  forControlEvents:UIControlEventValueChanged];
-	self.refreshControl = refresh;*/
+	self.refreshControl = refresh;
+}
+
+- (void)configureHeaderView
+{
+	KnotchUserProfileHeaderSectionView* headerView = (KnotchUserProfileHeaderSectionView*)([[NSBundle mainBundle] loadNibNamed:@"KnotchUserProfileHeaderSection" owner:self options: nil][0]);
+	[headerView setHeaderSectionUser: knotchUser];
+	[[KnotchMiniClientDataServices sharedServices] getImageWithURL: [knotchUser userProfilePictureURL] withSuccessHandler:^ (UIImage* image) {
+		[headerView setHeaderSectionImage: image];
+	}];
+	[self.view addSubview: headerView];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+	[self configureTable];
 	
 	// retrieve 20 knotches at a time from services...
 	currentKnotchesRetreived = 20;
@@ -45,32 +56,31 @@ static NSString *KNOTCH_TABLEVIEW_CELL = @"KnotchUserProfileTableViewCell";
 		knotches = [[NSMutableArray alloc] init];
 		knotchUser = [[KnotchMiniClientUser alloc] init];
 	}
-	//[self configureTable];
-	[self updateKnotches];
+	[self updateKnotchesStartingAt:0 endingAt:currentKnotchesRetreived];
 }
 
-- (void) updateKnotches
+- (void) updateKnotchesStartingAt: (int)startNumber endingAt: (int) endNumber
 {
 	KnotchMiniClientDataServices* services = [KnotchMiniClientDataServices sharedServices];
-	[services getKnotchesWithUserID: KNOTCH_USER_ID withCount: currentKnotchesRetreived withSuccessHandler: ^(NSURLRequest* request, NSHTTPURLResponse* response, id JSON) {
+	[services getKnotchesWithUserID: KNOTCH_USER_ID withCount: endNumber withSuccessHandler: ^(NSURLRequest* request, NSHTTPURLResponse* response, id JSON) {
 		NSLog(@"Update knotches sucessful...");
 		NSDictionary* responseJSON = (NSDictionary*) JSON;
 		knotchUser = [[KnotchMiniClientUser alloc] initWithDictionary: [responseJSON objectForKey: @"userInfo"]];
 		NSArray* arr = [responseJSON objectForKey: @"knotches"];
-		for (NSDictionary* dict in arr)
+		NSDictionary* dict;
+		for(int i = startNumber; i < endNumber; i++)
 		{
+			dict = arr[i];
 			KnotchData* data = [[KnotchData alloc] initWithDictionary: dict];
 			[knotches addObject: data];
 		}
 		[self.tableView reloadData];
-	 
+		[self configureHeaderView];
 	} withErrorHandler: ^(NSURLRequest* request, NSURLResponse* response, NSError* error, id JSON)
 	{
 		NSLog(@"ERROR: Oh noes...the notches were not retrieved");
 		NSLog(@"%@", error);
 	}];
-	
-	
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,7 +95,7 @@ static NSString *KNOTCH_TABLEVIEW_CELL = @"KnotchUserProfileTableViewCell";
 	return 1;
 }
 
-- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+/*- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
 	if(section == 0)
 	{
@@ -97,7 +107,7 @@ static NSString *KNOTCH_TABLEVIEW_CELL = @"KnotchUserProfileTableViewCell";
 		return headerView;
 	}
 	else return nil;
-}
+}*/
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -124,13 +134,23 @@ static NSString *KNOTCH_TABLEVIEW_CELL = @"KnotchUserProfileTableViewCell";
 
 - (void)refreshView: (UIRefreshControl*) refresh
 {
-	/*refresh.attributedTitle = [[NSAttributedString alloc] initWithString: @"Refreshing Front Page Posts"];
+	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: @"Refreshing Front Page Posts"];
 	
-	[self updateFrontPagePosts];
+	currentKnotchesRetreived = 20;
+	[self updateKnotchesStartingAt: 0 endingAt: currentKnotchesRetreived];
+	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: [KnotchMiniClientUtils getLastUpdatedTime]];
+	[refresh endRefreshing];
 	
-	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: [Helpers getLastUpdatedTime]];
-	[refresh endRefreshing];*/
-	
+}
+
+- (void) tableView: (UITableView*) tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	if ((indexPath.section == [self.tableView numberOfSections] - 1)
+		&& (indexPath.row == [self.tableView numberOfRowsInSection:indexPath.section] - 1))
+	{
+		[self updateKnotchesStartingAt: currentKnotchesRetreived endingAt: currentKnotchesRetreived+20];
+		currentKnotchesRetreived += 20;
+	}
 }
 
 @end
