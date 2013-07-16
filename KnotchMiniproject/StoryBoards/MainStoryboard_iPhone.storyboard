@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="i9u-nt-Fxu">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Knotch Mini Client View Controller - Blah-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="KnotchMiniClientViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="169" sectionHeaderHeight="22" sectionFooterHeight="22" id="9oa-l9-bq6">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="KnotchUserProfileTableViewCell" id="xvp-gx-XJX" customClass="KnotchUserProfileTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2" id="J98-uk-lI4"/>
+                            <outlet property="delegate" destination="2" id="WEv-WR-Soi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Blah" id="tss-sd-vPn"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="-111"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dOA-QA-df2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWP-gE-vX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController navigationBarHidden="YES" id="i9u-nt-Fxu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mUG-oB-UPd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Ppv-Qj-ERK"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-367" y="-111"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="KnotchMiniClientViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KnotchMiniClientViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="userProfileHeaderSection" candidateClass="KnotchUserProfileHeaderSectionView"/>
+            </relationships>
+        </class>
+        <class className="KnotchUserProfileHeaderSectionView" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KnotchUserProfileHeaderSectionView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="headerSectionFollowersNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerSectionFollowingNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerSectionGloryNumberLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerSectionImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="headerSectionLocationLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="headerSectionNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="KnotchUserProfileTableViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/KnotchUserProfileTableViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="knotchTopicLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="knotchUserResponseApostrophe" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="knotchUserResponseLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="knotchUserResponseLabelContainer" candidateClass="UIView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
