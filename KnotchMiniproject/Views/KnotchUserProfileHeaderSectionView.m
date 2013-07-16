@@ -13,14 +13,6 @@
 	@synthesize headerSectionFollowersNumberLabel;
 	@synthesize headerSectionUser = _headerSectionUser;
 
-static void dumpAllFonts() {
-    for (NSString *familyName in [UIFont familyNames]) {
-        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-            NSLog(@"%@", fontName);
-        }
-    }
-}
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -29,7 +21,6 @@ static void dumpAllFonts() {
     }
     return self;
 }
-
 
 - (void) setHeaderSectionUser:(KnotchMiniClientUser *) user
 {

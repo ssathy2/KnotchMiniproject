@@ -38,18 +38,11 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 	self.refreshControl = refresh;
 }
 
-- (void)configureSentimentColorView
-{
-	KnotchSentimentColorRangeView* colorRangeView = (KnotchSentimentColorRangeView*)([[NSBundle mainBundle] loadNibNamed:@"KnotchSentimentColorRange" owner:self options: nil][0]);
-	[self.tableView setTableHeaderView: colorRangeView];
-}
-
 - (void) updateKnotches
 {
 	currentKnotchesRetreived = 20;
 	if(!knotches && !knotchUser) {
 		knotches = [[NSMutableArray alloc] init];
-		//knotchUser = [[KnotchMiniClientUser alloc] init];
 	}
 	[self updateKnotchesStartingAt:0 endingAt:currentKnotchesRetreived];
 }
@@ -163,7 +156,7 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 
 		NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"KnotchUserProfileHeaderSection" owner:self options:nil];
 		cell = [nib objectAtIndex:0];
-	
+		
 		[cell setHeaderSectionUser: knotchUser];
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		
@@ -184,7 +177,9 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 - (void)refreshView: (UIRefreshControl*) refresh
 {
 	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: @"Refreshing Knotches"];
-
+	[knotches removeAllObjects];
+	[self.tableView reloadData];
+	
 	[self updateKnotches];
 	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: [KnotchMiniClientUtils getLastUpdatedTime]];
 	[refresh endRefreshing];
