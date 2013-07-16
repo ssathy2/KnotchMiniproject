@@ -35,11 +35,16 @@ static void dumpAllFonts() {
 {
 	if(user != _headerSectionUser)
 	{
-		self.headerSectionNameLabel.font = [UIFont fontWithName: @"Aller" size: 17.0f];
+		self.headerSectionNameLabel.font = [UIFont fontWithName: @"Aller" size: 20.0f];
 		self.headerSectionLocationLabel.font = [UIFont fontWithName: @"Aller" size: 13.0f];
-		self.headerSectionGloryNumberLabel.font = [UIFont fontWithName: @"Lato" size: 15.0f];
-		self.headerSectionFollowersNumberLabel.font = [UIFont fontWithName: @"Lato" size: 15.0f];
-		self.headerSectionFollowingNumberLabel.font = [UIFont fontWithName: @"Lato" size: 15.0f];
+		
+		self.headerSectionFollowersStaticTextLabel.font = [UIFont fontWithName: @"Aller" size: 10.0f];
+		self.headerSectionFollowingStaticTextLabel.font = [UIFont fontWithName: @"Aller" size: 10.0f];
+		self.headerSectionGloryStaticTextLabel.font = [UIFont fontWithName: @"Aller" size: 10.0f];
+		
+		self.headerSectionGloryNumberLabel.font = [UIFont fontWithName: @"Lato-Bold" size: 17.0f];
+		self.headerSectionFollowersNumberLabel.font = [UIFont fontWithName: @"Lato-Bold" size: 17.0f];
+		self.headerSectionFollowingNumberLabel.font = [UIFont fontWithName: @"Lato-Bold" size: 17.0f];
 		
 		
 		_headerSectionUser = user;

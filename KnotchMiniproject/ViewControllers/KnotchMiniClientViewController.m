@@ -12,6 +12,7 @@
 #import "KnotchMiniClientUser.h"
 #import "KnotchMiniClientDataServices.h"
 #import "KnotchSentimentColorRangeView.h"
+#import "KnotchUserProfileHeaderNameBarView.h"
 
 static NSString *KNOTCH_TABLEVIEW_CELL = @"KnotchUserProfileTableViewCell";
 static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableViewCell";
@@ -28,7 +29,7 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 
 // Put all table configuration init stuff here
 - (void)configureTable
-{
+{	
 	UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
 	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: @"Pull to Refresh"];
 	[refresh addTarget:self
@@ -128,16 +129,21 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 		[colorRangeView setSentimentDictionary: sentimentDict withTotalKnotches: currentKnotchesRetreived];
 		return colorRangeView;
 	}
-	else return nil;
+	else
+	{
+		KnotchUserProfileHeaderNameBarView* headerNameBar = (KnotchUserProfileHeaderNameBarView*)([[NSBundle mainBundle] loadNibNamed:@"KnotchUserProfileHeaderNameBar" owner:self options: nil][0]);
+		[headerNameBar setHeaderBarViewName: [knotchUser userName]];
+		return headerNameBar;
+	}
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	if (section == 1)
-	{
+	//if (section == 1)
+	//{
 		return 60.0;
-	}
-	else return 0.0;
+	//}
+	//else return .0;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -149,6 +155,7 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 		cell = [nib objectAtIndex:0];
 
 		[cell setKnotchData: [knotches objectAtIndex: [indexPath row]]];
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
 		return cell;
 	}
 	else {
@@ -158,6 +165,8 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 		cell = [nib objectAtIndex:0];
 	
 		[cell setHeaderSectionUser: knotchUser];
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+		
 		[[KnotchMiniClientDataServices sharedServices] getImageWithURL: [knotchUser userProfilePictureURL] withSuccessHandler:^ (UIImage* image) {
 			[cell setHeaderSectionImage: image];
 		}];
@@ -174,10 +183,9 @@ static NSString *KNOTCH_PROFILE_HEADER_CELL = @"KnotchUserProfileHeaderTableView
 
 - (void)refreshView: (UIRefreshControl*) refresh
 {
-	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: @"Refreshing Front Page Posts"];
-	
-	currentKnotchesRetreived = 20;
-	[self updateKnotchesStartingAt: 0 endingAt: currentKnotchesRetreived];
+	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: @"Refreshing Knotches"];
+
+	[self updateKnotches];
 	refresh.attributedTitle = [[NSAttributedString alloc] initWithString: [KnotchMiniClientUtils getLastUpdatedTime]];
 	[refresh endRefreshing];
 	

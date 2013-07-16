@@ -22,8 +22,21 @@
 	[self drawSentimentBar];
 }
 
+- (void) removeAllSubviews: (UIView*) v
+{
+	for(UIView* sub in [v subviews])
+	{
+		[sub removeFromSuperview];
+	}
+}
+
 - (void) drawSentimentBar
 {
+	if([[[self sentimentColorRangeContainerView] subviews] count] > 0)
+	{
+		[self removeAllSubviews: [self sentimentColorRangeContainerView]];
+	}
+	
 	CGRect containerRect = [[self sentimentColorRangeContainerView] bounds];
 	float xColorView = containerRect.origin.x;
 	NSSortDescriptor* sortOrder = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: YES];

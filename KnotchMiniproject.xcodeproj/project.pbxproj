@@ -71,6 +71,8 @@
 		DE1D9AF11793BA6400EA04A8 /* topic-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE1D9ACF1793BA6400EA04A8 /* topic-arrow@2x.png */; };
 		DE8D45DD1794BFE300340CAD /* KnotchSentimentColorRange.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8D45DC1794BFE300340CAD /* KnotchSentimentColorRange.xib */; };
 		DE8D45E01794C0E100340CAD /* KnotchSentimentColorRangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8D45DF1794C0E100340CAD /* KnotchSentimentColorRangeView.m */; };
+		DE8D45E21794F6E000340CAD /* KnotchUserProfileHeaderNameBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8D45E11794F6E000340CAD /* KnotchUserProfileHeaderNameBar.xib */; };
+		DE8D45E51794F76B00340CAD /* KnotchUserProfileHeaderNameBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8D45E41794F76A00340CAD /* KnotchUserProfileHeaderNameBarView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,9 @@
 		DE8D45DC1794BFE300340CAD /* KnotchSentimentColorRange.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnotchSentimentColorRange.xib; sourceTree = "<group>"; };
 		DE8D45DE1794C0E100340CAD /* KnotchSentimentColorRangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchSentimentColorRangeView.h; sourceTree = "<group>"; };
 		DE8D45DF1794C0E100340CAD /* KnotchSentimentColorRangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchSentimentColorRangeView.m; sourceTree = "<group>"; };
+		DE8D45E11794F6E000340CAD /* KnotchUserProfileHeaderNameBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnotchUserProfileHeaderNameBar.xib; sourceTree = "<group>"; };
+		DE8D45E31794F76A00340CAD /* KnotchUserProfileHeaderNameBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnotchUserProfileHeaderNameBarView.h; sourceTree = "<group>"; };
+		DE8D45E41794F76A00340CAD /* KnotchUserProfileHeaderNameBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnotchUserProfileHeaderNameBarView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +325,9 @@
 				DE8D45DC1794BFE300340CAD /* KnotchSentimentColorRange.xib */,
 				DE8D45DE1794C0E100340CAD /* KnotchSentimentColorRangeView.h */,
 				DE8D45DF1794C0E100340CAD /* KnotchSentimentColorRangeView.m */,
+				DE8D45E11794F6E000340CAD /* KnotchUserProfileHeaderNameBar.xib */,
+				DE8D45E31794F76A00340CAD /* KnotchUserProfileHeaderNameBarView.h */,
+				DE8D45E41794F76A00340CAD /* KnotchUserProfileHeaderNameBarView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -517,6 +525,7 @@
 				DE1D9AF01793BA6400EA04A8 /* profile-test@2x.png in Resources */,
 				DE1D9AF11793BA6400EA04A8 /* topic-arrow@2x.png in Resources */,
 				DE8D45DD1794BFE300340CAD /* KnotchSentimentColorRange.xib in Resources */,
+				DE8D45E21794F6E000340CAD /* KnotchUserProfileHeaderNameBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +579,7 @@
 				DE1D9AA81793BA5300EA04A8 /* KnotchMiniClientDataServices.m in Sources */,
 				DE1D9AEE1793BA6400EA04A8 /* main.m in Sources */,
 				DE8D45E01794C0E100340CAD /* KnotchSentimentColorRangeView.m in Sources */,
+				DE8D45E51794F76B00340CAD /* KnotchUserProfileHeaderNameBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *headerSectionGloryNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerSectionFollowingNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *headerSectionFollowersNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionGloryStaticTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionFollowersStaticTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerSectionFollowingStaticTextLabel;
 
 - (void) setHeaderSectionImage: (UIImage*) img;
 @end
